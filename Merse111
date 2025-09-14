@@ -1,0 +1,24 @@
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Parent = player:WaitForChild("PlayerGui")
+
+local messages = {
+    "โดนกูหลอก",
+    "ไอโตไอหน้าhee",
+    "อย่างโง่",
+    "แค่นี้ยังโดนหลอก"
+}
+
+for _, text in ipairs(messages) do
+    local label = Instance.new("TextLabel")
+    label.Size = UDim2.new(1,0,1,0)
+    label.Position = UDim2.new(0,0,0,0)
+    label.BackgroundColor3 = Color3.new(0,0,0)
+    label.TextColor3 = Color3.new(1,1,1)
+    label.TextScaled = true
+    label.Text = text
+    label.Parent = gui
+
+    wait(1)
+    label:Destroy()
+end
